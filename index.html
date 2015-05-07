@@ -35,5 +35,14 @@
         <li> Template runit services
         <li> Use consul/registrators registrations within to configure services
       </ul>
+      It seems like there are a number of different approaches to
+      starting services.  I'm most comfortable starting e.g. registrator
+      under runit.
+      <br>
+      E.g. /etc/sv/registrator/run:
+      <pre>
+        #!/bin/bash
+        docker run -d=false -t=true -v /var/run/docker.sock:/tmp/docker/sock -h $HOSTNAME gliderlabs/registrator consul:
+        </pre>
   </body>
 </html>

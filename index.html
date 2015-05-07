@@ -1,1 +1,39 @@
-Nothing here yet.
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>This is an old school web page</h1>
+    <p/>
+      Until I can find a way to do this in some way that's prettier,
+      I'm going to be doing this in circa-1998 html.
+    <h2>5/6/2015</h2>
+    <p/>
+      Today I've been playing with creating a somewhat workable
+      docker/container environment.  I've been reading a whole lot of
+      material about how to setup docker.
+      <br>
+      I'm doing this to support a small test system that I want to grow.
+    <p/>
+      Phase 1: Install containers for the head version of antirez/disque.
+      <br>
+      Doing this gives me a service that I can easily read/write to,
+      which is simple, but which doesn't have a whole lot of convetion
+      build up around it from other contributors.  This lets me make all
+      of my own mistakes.
+      <br>
+      The first part of the project is to create a 3-node consul
+      service.  Once that service is established, my hope is to build
+      other experiments around it.
+    <p>
+      To allow for discovery, each VM that's running disque will run
+      consul, regstrator, and I don't know, something else.
+      <br>
+      Other things to run here:
+      <ul>
+        <li> Salt deployments of services
+        <li> Use runit to start and run containers that provide services.
+        <li> Template runit services
+        <li> Use consul/registrators registrations within to configure services
+      </ul>
+  </body>
+</html>
